@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ Titulo }}</title>
+     <link rel="stylesheet" href="static/estilo.css">
+
+  </head>
+  <body>
+    <div class="estudante-card">
+        <h1>{{ Titulo }}</h1>
+        <form method="POST" action="/autenticar">
+          <img src="../static/imagens/login.png">
+          <fieldset>
+           <div class="form-group">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id ="usuario" name="usuario" required>
+           </div>
+           <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+           </div>
+            <button class="btn-salvar" type="submit">Entrar</button>
+          </fieldset>
+        </form>
+    </div>
+           {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                   {{ message }}
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+</body>
+</html>

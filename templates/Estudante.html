@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="static/estilo.css">
+</head>
+<body>
+    <div class="page-header">
+        <h1>{{ Titulo }}</h1>
+    </div>
+    {% for Estudantes in ListaEstudantes  %}
+        <div class="estudante-card">
+            <h2>{{Estudantes[1]}}</h2>
+            <img src="../static/imagens/estudante.png">
+            <p>RM: {{ Estudantes[0] }}</p>
+            <p>Data de Nascimento: {{ Estudantes[2] }}</p>
+            <p>Sexo: {{ Estudantes[3] }} </p>
+            <p>Endereço: {{ Estudantes[4] }} </p>
+            <p>E-mail: {{ Estudantes[5] }} </p>
+            <p>Telefone: {{ Estudantes[6] }} </p>
+            <p>Curso: {{ Estudantes[7] }} </p>
+
+            <br>
+            <a href="/excluir/{{ Estudantes[0] }}">Excluir</a>
+            <a href="/editar/{{ Estudantes[0] }}">Editar</a>
+        </div>
+    {%endfor%}
+    <br>
+    <div class="estudante-card">
+     <a href="/">Voltar</a>
+    </div>
+    <div class="estudante-card">
+     <a href="/deslogar">Deslogar</a>
+    </div>
+</body>
+
+
+</html>

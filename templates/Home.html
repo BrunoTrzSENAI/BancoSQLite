@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="static/estilo.css">
+</head>
+<body>
+ <div class="estudante-card">
+        <h1>{{ Titulo }}</h1>
+    <div class="estudante-card">
+        <a href="/estudante"><img src="../static/imagens/estudante.png"></a>
+        <p>Lista de Estudantes</p>
+    </div>
+    <div class="estudante-card">
+        <a href="/cadastro"><img src="../static/imagens/cadastro.png"></a>
+        <p>Cadastro de Estudantes</p>
+    </div>
+     <div class="estudante-card">
+        <a href="/cadastro-turma"><img src="../static/imagens/turmas.png"></a>
+        <p>Cadastro de Turmas</p>
+    </div>
+</div>
+         {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                   {{ message }}
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+</body>
+</html>
