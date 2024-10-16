@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 70px;
+    background-image: url('/static/imagens/Fundo.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.estudante-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 10px;
+}
+
+img {
+    max-width: 200px;
+}
+
+.form-group{
+        margin: 2px;
+        display: grid;
+        grid-template-columns: 0.4fr 1fr;
+        max-width: 400px;
+        label {
+            margin-top: 5px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        input,select {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+}
+.alert-success{
+    padding-top: 20px;
+}
+
+.btn-salvar{
+    margin-top: 10px;
+    height: 30px;
+    width: 150px;
+}
