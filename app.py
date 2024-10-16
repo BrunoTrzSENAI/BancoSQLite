@@ -1,6 +1,6 @@
 from flask import Flask,render_template,request,redirect,g,session,flash
 import sqlite3
-
+import os
 app = Flask(__name__)
 app.secret_key="Senai"
 
@@ -169,5 +169,8 @@ def criarturma():
     return redirect('/')
 
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    # Obter a porta da variável de ambiente, ou usar 5000 por padrão
+    port = int(os.environ.get('PORT', 5000))
+    # Executar o app Flask na porta correta e com o host '0.0.0.0'
+    app.run(host='0.0.0.0', port=port)
